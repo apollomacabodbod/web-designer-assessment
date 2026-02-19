@@ -5,7 +5,7 @@ export default function HomeFremiDescription() {
         <p className="font-openSans text-[0.9375rem] font-normal text-[#555]">
           <span className="text-[#555] text-[0.9375rem] font-bold font-openSans">
             Fremi
-          </span>{" "}
+          </span>
           performs excavation and construction services within the private and
           commercial market in Møre og Romsdal and the surrounding area. Just
           contact us regarding work areas, we are very flexible, and we tailor
