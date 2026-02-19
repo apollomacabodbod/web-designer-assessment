@@ -1,4 +1,5 @@
 import HomeFremiDescription from "./home-fremi-description";
+import HomeFremiServices from "./home-fremi-services";
 import HomeHeroSection from "./home-hero-section";
 import HomeInfo from "./home-info";
 import HomeTransport from "./home-transport";
@@ -14,6 +15,7 @@ export default function Home() {
       <HomeTransportCards />
       <HomeWelcomeFremi />
       <HomeFremiDescription />
+      <HomeFremiServices />
     </>
   );
 }
