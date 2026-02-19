@@ -1,3 +1,4 @@
+import HomeContactUs from "./home-contact-us";
 import HomeFremiDescription from "./home-fremi-description";
 import HomeFremiServices from "./home-fremi-services";
 import HomeHeroSection from "./home-hero-section";
@@ -16,6 +17,7 @@ export default function Home() {
       <HomeWelcomeFremi />
       <HomeFremiDescription />
       <HomeFremiServices />
+      <HomeContactUs />
     </>
   );
 }
