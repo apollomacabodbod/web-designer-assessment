@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import humberger from "src/assets/header/humberger.svg";
 import Sidebar from "./side-bar";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -13,7 +14,20 @@ export default function Header() {
       >
         <div className="flex flex-col  max-w-[1200px] lg:mx-auto  px-[1.25em] py-[1em]">
           <div className="flex items-center justify-between gap-[1.5em]">
-            <div className="flex items-center  cursor-pointer ">
+            <motion.div
+              className="flex items-center  cursor-pointer "
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+                },
+              }}
+            >
               <Link
                 to={"/"}
                 className=" text-[#fff] font-openSans font-bold text-[1.3rem] lg:text-[1.875rem]"
@@ -25,12 +39,25 @@ export default function Header() {
                 /> */}
                 FREMI V/ FRODE FREMMERLID
               </Link>
-            </div>
+            </motion.div>
 
             <div className="lg:flex lg:flex-col hidden">
               <div className="flex items-center gap-[2em]">
                 <div className="lg:flex lg:flex-col hidden">
-                  <div className="flex items-center  lg:gap-[1em] ">
+                  <motion.div
+                    className="flex items-center  lg:gap-[1em] "
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    variants={{
+                      hidden: { opacity: 0, y: 10 },
+                      visible: {
+                        opacity: 1,
+                        y: 0,
+                        transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+                      },
+                    }}
+                  >
                     <Link
                       to={"/"}
                       className="text-[#fff] font-openSans text-[0.9375rem] font-bold uppercase"
@@ -40,27 +67,27 @@ export default function Header() {
                     </Link>
 
                     <Link
-                      to={"/testimontials"}
+                      to={"/"}
                       className="text-[#fff] font-openSans text-[0.9375rem] font-bold uppercase "
                     >
                       {""}
                       Tjenester
                     </Link>
                     <Link
-                      to={"/pricing"}
+                      to={"/"}
                       className="text-[#fff] font-openSans text-[0.9375rem] font-bold uppercase "
                     >
                       {" "}
                       Om oss
                     </Link>
                     <Link
-                      to={"/blog"}
+                      to={"/"}
                       className="text-[#fff] font-openSans text-[0.9375rem] font-bold uppercase"
                     >
                       {" "}
                       Kontakt
                     </Link>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
@@ -69,12 +96,23 @@ export default function Header() {
               className="flex flex-col lg:hidden cursor-pointer  hover:opacity-100 transition-opacity duration-1000 ease-in-out active:scale-95 active:transition-transform active:duration-200 active:ease-out"
               onClick={() => setSidebarOpen(!sidebarOpen)}
             >
-              <img
+              <motion.img
                 src={humberger}
                 alt=""
                 width={23}
                 height={0}
                 className="cursor-pointer"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+                  },
+                }}
               />
             </div>
           </div>
