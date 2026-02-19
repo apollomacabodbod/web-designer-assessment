@@ -2,6 +2,7 @@ import imageOne from "src/assets/home-transport-cards/image-one.jpg";
 import imageTwo from "src/assets/home-transport-cards/image-two.jpg";
 import imageThree from "src/assets/home-transport-cards/image-three.jpg";
 import imageFour from "src/assets/home-transport-cards/image-four.jpg";
+import { motion } from "framer-motion";
 
 export default function HomeTransportCards() {
   const data = [
@@ -42,19 +43,56 @@ export default function HomeTransportCards() {
       <div className="grid  sm:grid-cols-2 lg:grid-cols-4 max-w-[1200px] lg:mx-auto  px-[1.25em] gap-[2em] mt-[3.5em]">
         {data.map((item) => (
           <div className="flex flex-col gap-[1em]" key={item.id}>
-            <img
+            <motion.img
               src={item.image}
               alt=""
               className="object-cover object-center aspect-[147/80]"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+                },
+              }}
             />
 
-            <p className="text-center font-openSans text-[1.125rem] font-bold text-[#2b2b2b]">
+            <motion.p
+              className="text-center font-openSans text-[1.125rem] font-bold text-[#2b2b2b]"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+                },
+              }}
+            >
               {item.title}
-            </p>
+            </motion.p>
 
-            <p className="text-center font-openSans font-normal text-[0.9375rem] text-[#555] ">
+            <motion.p
+              className="text-center font-openSans font-normal text-[0.9375rem] text-[#555] "
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+                },
+              }}
+            >
               {item.description}
-            </p>
+            </motion.p>
           </div>
         ))}
       </div>
