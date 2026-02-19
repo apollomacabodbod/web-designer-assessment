@@ -21,7 +21,7 @@ export default function Footer() {
           >
             Utviklet av{" "}
             <motion.span
-              className="font-extrabold text-[#fff] text-[0.875rem]  "
+              className="font-extrabold text-[#fff] text-[0.875rem] cursor-pointer "
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
@@ -38,7 +38,7 @@ export default function Footer() {
             </motion.span>{" "}
             |{" "}
             <motion.span
-              className="font-extrabold text-[#fff] text-[0.875rem] "
+              className="font-extrabold text-[#fff] text-[0.875rem] cursor-pointer "
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
