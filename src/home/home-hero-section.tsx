@@ -36,23 +36,12 @@ export default function HomeHeroSection() {
     <div className="relative min-h-[35.3125em] overflow-hidden">
       {/* Slides */}
       {slides.map((slide, i) => (
-        <motion.div
+        <div
           key={i}
           className="absolute inset-0 transition-opacity duration-700 bg-cover bg-center"
           style={{
             backgroundImage: `url(${slide.img})`,
             opacity: i === current ? 1 : 0,
-          }}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, y: 10 },
-            visible: {
-              opacity: 1,
-              y: 0,
-              transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
-            },
           }}
         />
       ))}
@@ -85,20 +74,7 @@ export default function HomeHeroSection() {
       </motion.div>
 
       {/* Dots */}
-      <motion.div
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-2"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        variants={{
-          hidden: { opacity: 0, y: 10 },
-          visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
-          },
-        }}
-      >
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-2">
         {slides.map((_, i) => (
           <button
             key={i}
@@ -108,7 +84,7 @@ export default function HomeHeroSection() {
             }`}
           />
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }
