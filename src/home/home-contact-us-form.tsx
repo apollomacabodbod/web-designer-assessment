@@ -24,23 +24,23 @@ export default function HomeContactUsForm() {
           <input
             type="text"
             className="bg-[#f2f2f2] py-[1em] px-[1em] text-[#000] text-[0.75rem] font-normal font-openSans placeholder:text-[#000] outline-none"
-            placeholder="Your name"
+            placeholder="Ditt navn"
           />
 
           <input
             type="text"
             className="bg-[#f2f2f2] py-[1em] px-[1em] text-[#000] text-[0.75rem] font-normal font-openSans placeholder:text-[#000] outline-none"
-            placeholder="Your email"
+            placeholder="Din epost"
           />
 
           <input
             type="text"
             className="bg-[#f2f2f2] py-[1em] px-[1em] text-[#000] text-[0.75rem] font-normal font-openSans placeholder:text-[#000] outline-none"
-            placeholder="Your phone number"
+            placeholder="Ditt telefonnummer"
           />
 
           <textarea
-            placeholder="Your request"
+            placeholder="Din forespørsel"
             name=""
             id=""
             className="bg-[#f2f2f2] py-[1em] px-[1em] text-[#000] text-[0.75rem] font-normal font-openSans placeholder:text-[#000] outline-none min-h-[10em]"
@@ -59,12 +59,12 @@ export default function HomeContactUsForm() {
               to="/"
               className="text-[#555] font-normal font-openSans text-[0.875rem] hover:underline"
             >
-              I agree that the information is used for contact *
+              Jeg godtar at opplysningene brukes til kontakt *
             </Link>
           </div>
 
           <button className="flex items-center self-start bg-[#3598db] px-[2em] py-[0.6em] rounded-full text-[#fff] font-openSans hover:bg-[#2d99c7] transition-colors duration-300 cursor-pointer ">
-            Submit
+            Send inn
           </button>
         </form>
       </div>

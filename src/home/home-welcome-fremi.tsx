@@ -3,7 +3,7 @@ export default function HomeWelcomeFremi() {
     <>
       <div className="flex flex-col max-w-[1200px] lg:mx-auto  px-[1.25em] mt-[3em] gap-[1em]">
         <p className="text-[1.625rem] text-[#2b2b2b] font-openSans font-bold text-center">
-          Welcome to Fremi!
+          Velkommen til Fremi!
         </p>
 
         <div className="flex items-center justify-center">
