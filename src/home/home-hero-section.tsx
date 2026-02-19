@@ -32,7 +32,7 @@ export default function HomeHeroSection() {
   };
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-[35.3125em] overflow-hidden">
       {/* Slides */}
       {slides.map((slide, i) => (
         <div
