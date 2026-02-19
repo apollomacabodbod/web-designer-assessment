@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./home/page";
 import { LenisProvider } from "./context/smooth-scroll";
 import Header from "./components/kit/header";
