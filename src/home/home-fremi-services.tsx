@@ -15,12 +15,12 @@ export default function HomeFremiServices() {
 
           <div className="flex flex-col gap-[0.5em]">
             <p className="text-[#2b2b2b] text-[1.125rem] font-bold font-openSans">
-              Let professionals do the job
+              La fagfolk gjøre jobben
             </p>
 
             <p className="text-[#555] text-[0.9375rem] font-openSans font-normal">
-              To ensure the job is done correctly, and to avoid surprises, it is
-              always best to let professionals do the job.
+              For å sikre at jobben gjøres riktig, og for å unngå overraskelser
+              er det alltid best å la fagfolk gjøre jobben
             </p>
           </div>
         </div>
@@ -34,12 +34,12 @@ export default function HomeFremiServices() {
 
           <div className="flex flex-col gap-[0.5em]">
             <p className="text-[#2b2b2b] text-[1.125rem] font-bold font-openSans">
-              At the agreed time and price
+              Til avtalt tid og pris
             </p>
 
             <p className="text-[#555] text-[0.9375rem] font-openSans font-normal">
-              We keep our promises and keep you, the customer, updated at all
-              times.
+              Vi holder det vi lover, og holder deg som kunde oppdatert til
+              enhver tid.
             </p>
           </div>
         </div>
@@ -53,12 +53,12 @@ export default function HomeFremiServices() {
 
           <div className="flex flex-col gap-[0.5em]">
             <p className="text-[#2b2b2b] text-[1.125rem] font-bold font-openSans">
-              Flexible player
+              Fleksibel aktør
             </p>
 
             <p className="text-[#555] text-[0.9375rem] font-openSans font-normal">
-              We map the customer's needs and then adapt a solution that both
-              partners are satisfied with.
+              Vi kartlegger kundens behov og tilpasser deretter en løsning som
+              begge partner er fornøyd med.
             </p>
           </div>
         </div>

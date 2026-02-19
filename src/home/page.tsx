@@ -1,5 +1,6 @@
 import HomeContactUs from "./home-contact-us";
 import HomeContactUsForm from "./home-contact-us-form";
+import HomeDetails from "./home-details";
 import HomeFremiDescription from "./home-fremi-description";
 import HomeFremiServices from "./home-fremi-services";
 import HomeHeroSection from "./home-hero-section";
@@ -20,6 +21,7 @@ export default function Home() {
       <HomeFremiServices />
       <HomeContactUs />
       <HomeContactUsForm />
+      <HomeDetails />
     </>
   );
 }
