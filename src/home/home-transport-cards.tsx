@@ -39,7 +39,7 @@ export default function HomeTransportCards() {
   ];
   return (
     <>
-      <div className="grid  sm:grid-cols-2 lg:grid-cols-4 max-w-[1200px] lg:mx-auto  px-[1.25em] gap-[2em] mt-[3em]">
+      <div className="grid  sm:grid-cols-2 lg:grid-cols-4 max-w-[1200px] lg:mx-auto  px-[1.25em] gap-[2em] mt-[3.5em]">
         {data.map((item) => (
           <div className="flex flex-col gap-[1em]" key={item.id}>
             <img
@@ -48,11 +48,11 @@ export default function HomeTransportCards() {
               className="object-cover object-center aspect-[147/80]"
             />
 
-            <p className="text-center font-openSans text-[1.125rem] font-bold ">
+            <p className="text-center font-openSans text-[1.125rem] font-bold text-[#2b2b2b]">
               {item.title}
             </p>
 
-            <p className="text-center font-openSans font-normal text-[0.9375rem] ">
+            <p className="text-center font-openSans font-normal text-[0.9375rem] text-[#555] ">
               {item.description}
             </p>
           </div>

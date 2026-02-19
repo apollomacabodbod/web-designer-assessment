@@ -1,7 +1,7 @@
 export default function HomeTransport() {
   return (
     <>
-      <div className="flex flex-col mt-[2em] max-w-[1200px] lg:mx-auto  px-[1.25em] gap-[1.5em] ">
+      <div className="flex flex-col mt-[3em] max-w-[1200px] lg:mx-auto  px-[1.25em] gap-[1.5em] ">
         <p className="text-center text-[#2b2b2b] font-openSans font-bold text-[1.625rem]">
           Graving, drenering og transport av masser i Møre og Romsdal!
         </p>
