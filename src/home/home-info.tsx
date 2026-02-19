@@ -2,9 +2,9 @@ export default function HomeInfo() {
   return (
     <>
       <div className="bg-[#222222]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-[1200px] lg:mx-auto  px-[1.25em]  py-[1em]">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4  max-w-[1200px] lg:mx-auto  px-[1.25em]  py-[1em]">
           {/* Email */}
-          <div className="flex items-center gap-[0.5em] justify-center ">
+          <div className="flex items-center gap-[0.5em] justify-start md:justify-center ">
             <svg
               width="16"
               height="16"
@@ -24,7 +24,7 @@ export default function HomeInfo() {
 
           {/* Phone */}
 
-          <div className="flex items-center gap-[0.5em] justify-center">
+          <div className="flex items-center gap-[0.5em] justify-start md:justify-center">
             <svg
               width="16"
               height="16"
@@ -44,7 +44,7 @@ export default function HomeInfo() {
 
           {/* Location */}
 
-          <div className="flex items-center gap-[0.5em] justify-center">
+          <div className="flex items-center gap-[0.5em] justify-start md:justify-center">
             <svg
               width="16"
               height="16"
@@ -64,7 +64,7 @@ export default function HomeInfo() {
 
           {/* Globe */}
 
-          <div className="flex items-center gap-[0.5em] justify-center">
+          <div className="flex items-center gap-[0.5em] justify-start md:justify-center">
             <svg
               width="16"
               height="16"
