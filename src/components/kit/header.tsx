@@ -16,7 +16,7 @@ export default function Header() {
             <div className="flex items-center  cursor-pointer ">
               <Link
                 to={"/"}
-                className=" text-[#fff] font-openSans font-bold text-[1.875rem]"
+                className=" text-[#fff] font-openSans font-bold text-[1.3rem] lg:text-[1.875rem]"
               >
                 {/* <img
                   src={logoLogistix}
