@@ -57,7 +57,7 @@ export default function HomeContactUsForm() {
 
             <Link
               to="/"
-              className="text-[#555] font-normal font-openSans text-[0.875rem] hover:underline"
+              className="text-[#555] font-normal font-openSans text-[0.850rem] sm:text-[0.875rem] hover:underline"
             >
               Jeg godtar at opplysningene brukes til kontakt *
             </Link>
