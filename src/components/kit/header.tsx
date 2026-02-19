@@ -2,8 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import humberger from "src/assets/header/humberger.svg";
 import Sidebar from "./side-bar";
-import logoLogistix from "src/assets/header/logo-logistix.png";
-import redTelephone from "src/assets/header/red-telephone.svg";
 
 export default function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
