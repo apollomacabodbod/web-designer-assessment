@@ -1,12 +1,27 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import { motion } from "framer-motion";
+
 export default function HomeContactUsForm() {
   const [checked, setChecked] = useState(false);
   return (
     <>
       <div className="grid sm:grid-cols-2 max-w-[1200px] lg:mx-auto  px-[1.25em] mt-[3em] gap-[2em]">
-        <div className="flex flex-col w-full h-[21.9375em] sm:h-full">
+        <motion.div
+          className="flex flex-col w-full h-[21.9375em] sm:h-full"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 10 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+            },
+          }}
+        >
           <iframe
             className="w-full h-full"
             title="Demografie Karte Deutschland"
@@ -16,37 +31,94 @@ export default function HomeContactUsForm() {
               Demografie Karte Deutschland
             </a>
           </iframe>
-        </div>
+        </motion.div>
 
         {/* Contact Form */}
 
         <form action="" className="flex flex-col w-full gap-[1em]">
-          <input
+          <motion.input
             type="text"
             className="bg-[#f2f2f2] py-[1em] px-[1em] text-[#000] text-[0.75rem] font-normal font-openSans placeholder:text-[#000] outline-none"
             placeholder="Ditt navn"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+              },
+            }}
           />
 
-          <input
+          <motion.input
             type="text"
             className="bg-[#f2f2f2] py-[1em] px-[1em] text-[#000] text-[0.75rem] font-normal font-openSans placeholder:text-[#000] outline-none"
             placeholder="Din epost"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+              },
+            }}
           />
 
-          <input
+          <motion.input
             type="text"
             className="bg-[#f2f2f2] py-[1em] px-[1em] text-[#000] text-[0.75rem] font-normal font-openSans placeholder:text-[#000] outline-none"
             placeholder="Ditt telefonnummer"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+              },
+            }}
           />
 
-          <textarea
+          <motion.textarea
             placeholder="Din forespørsel"
             name=""
             id=""
             className="bg-[#f2f2f2] py-[1em] px-[1em] text-[#000] text-[0.75rem] font-normal font-openSans placeholder:text-[#000] outline-none min-h-[10em]"
-          ></textarea>
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+              },
+            }}
+          ></motion.textarea>
 
-          <div className="flex items-center gap-[0.5em]">
+          <motion.div
+            className="flex items-center gap-[0.5em]"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+              },
+            }}
+          >
             <input
               type="checkbox"
               id="agree"
@@ -61,11 +133,24 @@ export default function HomeContactUsForm() {
             >
               Jeg godtar at opplysningene brukes til kontakt *
             </Link>
-          </div>
+          </motion.div>
 
-          <button className="flex items-center self-start bg-[#3598db] px-[2em] py-[0.6em] rounded-full text-[#fff] font-openSans hover:bg-[#2d99c7] transition-colors duration-300 cursor-pointer ">
+          <motion.button
+            className="flex items-center self-start bg-[#3598db] px-[2em] py-[0.6em] rounded-full text-[#fff] font-openSans hover:bg-[#2d99c7] transition-colors duration-300 cursor-pointer "
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+              },
+            }}
+          >
             Send inn
-          </button>
+          </motion.button>
         </form>
       </div>
     </>
