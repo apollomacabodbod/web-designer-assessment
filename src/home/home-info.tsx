@@ -1,10 +1,25 @@
+import { motion } from "framer-motion";
+
 export default function HomeInfo() {
   return (
     <>
       <div className="bg-[#222222]">
         <div className="grid sm:grid-cols-2 md:grid-cols-4  max-w-[1200px] lg:mx-auto  px-[1.25em]  py-[1.3em]">
           {/* Email */}
-          <div className="flex items-center gap-[0.5em] justify-start md:justify-center ">
+          <motion.div
+            className="flex items-center gap-[0.5em] justify-start md:justify-center "
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+              },
+            }}
+          >
             <svg
               width="16"
               height="16"
@@ -20,11 +35,24 @@ export default function HomeInfo() {
             <p className="text-[#fff] font-openSans text-[0.875rem] font-normal">
               fro-fre@outlook.com
             </p>
-          </div>
+          </motion.div>
 
           {/* Phone */}
 
-          <div className="flex items-center gap-[0.5em] justify-start md:justify-center">
+          <motion.div
+            className="flex items-center gap-[0.5em] justify-start md:justify-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+              },
+            }}
+          >
             <svg
               width="16"
               height="16"
@@ -40,11 +68,24 @@ export default function HomeInfo() {
             <p className="text-[#fff] font-openSans text-[0.875rem] font-normal">
               926 04 072
             </p>
-          </div>
+          </motion.div>
 
           {/* Location */}
 
-          <div className="flex items-center gap-[0.5em] justify-start md:justify-center">
+          <motion.div
+            className="flex items-center gap-[0.5em] justify-start md:justify-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+              },
+            }}
+          >
             <svg
               width="16"
               height="16"
@@ -60,11 +101,24 @@ export default function HomeInfo() {
             <p className="text-[#fff] font-openSans text-[0.875rem] font-normal">
               , 6260 SKODJE
             </p>
-          </div>
+          </motion.div>
 
           {/* Globe */}
 
-          <div className="flex items-center gap-[0.5em] justify-start md:justify-center">
+          <motion.div
+            className="flex items-center gap-[0.5em] justify-start md:justify-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+              },
+            }}
+          >
             <svg
               width="16"
               height="16"
@@ -80,7 +134,7 @@ export default function HomeInfo() {
             <p className="text-[#fff] font-openSans text-[0.875rem] font-normal">
               Orgnr 912 166 805
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>
