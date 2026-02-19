@@ -1,7 +1,8 @@
-export default function HomeInfo() {
+export default function HomeDetails() {
   return (
     <>
-      <div className="bg-[#222222]">
+      {" "}
+      <div className="bg-[#fff] mt-[5em] border border-gray-200">
         <div className="grid sm:grid-cols-2 md:grid-cols-4  max-w-[1200px] lg:mx-auto  px-[1.25em]  py-[1.3em]">
           {/* Email */}
           <div className="flex items-center gap-[0.5em] justify-start md:justify-center ">
@@ -17,7 +18,7 @@ export default function HomeInfo() {
               />
             </svg>
 
-            <p className="text-[#fff] font-openSans text-[0.875rem] font-normal">
+            <p className="text-[#555] font-openSans text-[0.875rem] font-normal">
               fro-fre@outlook.com
             </p>
           </div>
@@ -37,7 +38,7 @@ export default function HomeInfo() {
               />
             </svg>
 
-            <p className="text-[#fff] font-openSans text-[0.875rem] font-normal">
+            <p className="text-[#555] font-openSans text-[0.875rem] font-normal">
               926 04 072
             </p>
           </div>
@@ -57,7 +58,7 @@ export default function HomeInfo() {
               />
             </svg>
 
-            <p className="text-[#fff] font-openSans text-[0.875rem] font-normal">
+            <p className="text-[#555] font-openSans text-[0.875rem] font-normal">
               , 6260 SKODJE
             </p>
           </div>
@@ -77,7 +78,7 @@ export default function HomeInfo() {
               />
             </svg>
 
-            <p className="text-[#fff] font-openSans text-[0.875rem] font-normal">
+            <p className="text-[#555] font-openSans text-[0.875rem] font-normal">
               Orgnr 912 166 805
             </p>
           </div>
