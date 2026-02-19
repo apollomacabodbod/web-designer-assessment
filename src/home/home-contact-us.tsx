@@ -1,12 +1,40 @@
+import { motion } from "framer-motion";
+
 export default function HomeContactUs() {
   return (
     <>
       <div className="flex flex-col max-w-[1200px] lg:mx-auto  px-[1.25em] mt-[3em] gap-[1em]">
-        <p className="text-center text-[#2b2b2b] text-[1.625rem] font-openSans font-bold">
+        <motion.p
+          className="text-center text-[#2b2b2b] text-[1.625rem] font-openSans font-bold"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 10 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+            },
+          }}
+        >
           Kontakt oss
-        </p>
+        </motion.p>
 
-        <div className="flex items-center justify-center">
+        <motion.div
+          className="flex items-center justify-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 10 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+            },
+          }}
+        >
           <svg
             width="60"
             height="4"
@@ -15,7 +43,7 @@ export default function HomeContactUs() {
           >
             <rect width="60" height="4" rx="2" fill="#5ab732" />
           </svg>
-        </div>
+        </motion.div>
       </div>
     </>
   );
