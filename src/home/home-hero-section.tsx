@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import dumbTrack from "src/assets/home/dump-truck.jpg";
 import dumbTrackHeavy from "src/assets/home/dump-track-heavy.jpg";
+import { motion } from "framer-motion";
 
 const slides = [
   {
@@ -46,7 +47,20 @@ export default function HomeHeroSection() {
       ))}
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[rgba(34,34,34,0.50)] flex items-center justify-center">
+      <motion.div
+        className="absolute inset-0 bg-[rgba(34,34,34,0.50)] flex items-center justify-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, y: 10 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+          },
+        }}
+      >
         <div className="flex flex-col max-w-[1200px] px-[1.25em] gap-[2em]">
           {slides[current].subtitle && (
             <p className="text-center text-[#fff] text-[1.125rem] font-openSans font-bold">
@@ -57,7 +71,7 @@ export default function HomeHeroSection() {
             {slides[current].title}
           </p>
         </div>
-      </div>
+      </motion.div>
 
       {/* Dots */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-2">
