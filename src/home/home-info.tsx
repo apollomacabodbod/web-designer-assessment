@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function HomeInfo() {
   return (
@@ -32,9 +33,12 @@ export default function HomeInfo() {
               />
             </svg>
 
-            <p className="text-[#fff] font-openSans text-[0.875rem] font-normal">
+            <Link
+              to="/"
+              className="text-[#fff] font-openSans text-[0.875rem] font-normal hover:underline"
+            >
               fro-fre@outlook.com
-            </p>
+            </Link>
           </motion.div>
 
           {/* Phone */}
@@ -65,9 +69,12 @@ export default function HomeInfo() {
               />
             </svg>
 
-            <p className="text-[#fff] font-openSans text-[0.875rem] font-normal">
+            <Link
+              to="/"
+              className="text-[#fff] font-openSans text-[0.875rem] font-normal hover:underline"
+            >
               926 04 072
-            </p>
+            </Link>
           </motion.div>
 
           {/* Location */}
