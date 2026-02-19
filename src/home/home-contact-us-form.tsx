@@ -9,6 +9,7 @@ export default function HomeContactUsForm() {
         <div className="flex flex-col w-full h-[21.9375em] sm:h-full">
           <iframe
             className="w-full h-full"
+            title="Demografie Karte Deutschland"
             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=B%C3%B8brekka%206,%206260%20Skodje,%20Norway+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           >
             <a href="https://www.mapsdirections.info/de/evolkerung-auf-einer-karte-berechnen/">
