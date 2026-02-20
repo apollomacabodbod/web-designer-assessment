@@ -4,7 +4,6 @@ import Home from "./home/page";
 import { LenisProvider } from "./context/smooth-scroll";
 import Header from "./components/kit/header";
 import Footer from "./components/kit/footer";
-import ScrollTopButton from "./components/kit/scroll-top-button";
 
 function App() {
   const location = useLocation(); // ✅ Use the hook
@@ -19,8 +18,6 @@ function App() {
         {/* Footer */}
         <Footer />
       </div>
-
-      <ScrollTopButton />
     </LenisProvider>
   );
 }

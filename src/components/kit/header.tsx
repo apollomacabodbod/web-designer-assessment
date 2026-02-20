@@ -1,134 +1,69 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import humberger from "src/assets/header/humberger.svg";
-import Sidebar from "./side-bar";
-import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+
+const navLinks = [
+  { label: "Forside", href: "#forside" },
+  { label: "Tjenester", href: "#tjenester" },
+  { label: "Om oss", href: "#om-oss" },
+  { label: "Kontakt", href: "#kontakt" },
+];
 
 export default function Header() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <>
-      <div
-        className={`fixed top-0 left-0 w-full  transition-all duration-1000 ease-in-out z-40 ${" bg-[#222222] shadow-lg"}`}
-      >
-        <div className="flex flex-col  max-w-[1200px] lg:mx-auto  px-[1.25em] py-[1em]">
-          <div className="flex items-center justify-between gap-[1.5em]">
-            <motion.div
-              className="flex items-center  cursor-pointer "
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 10 },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
-                },
-              }}
-            >
-              <Link
-                to={"/"}
-                className=" text-[#fff] font-openSans font-bold text-[1.3rem] lg:text-[1.875rem]"
+      <header className="fixed top-0 left-0 right-0 z-50 bg-foreground/95 backdrop-blur-sm ">
+        <div className="container flex items-center justify-between h-16 max-w-[1200px] lg:mx-auto  px-[1.25em]">
+          <a
+            href="#forside"
+            className="font-heading text-lg font-bold tracking-tight text-primary-foreground"
+          >
+            FREMI{" "}
+            <span className="font-normal text-sm text-primary-foreground/70">
+              v/ Frode Fremmerlid
+            </span>
+          </a>
+
+          {/* Desktop */}
+          <nav className="hidden md:flex gap-8">
+            {navLinks.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-sm font-medium text-primary-foreground/80 hover:text-accent transition-colors"
               >
-                {/* <img
-                  src={logoLogistix}
-                  alt=""
-                  className="min-w-[12.5em] object-cover object-center"
-                /> */}
-                FREMI V/ FRODE FREMMERLID
-              </Link>
-            </motion.div>
+                {l.label}
+              </a>
+            ))}
+          </nav>
 
-            <div className="lg:flex lg:flex-col hidden">
-              <div className="flex items-center gap-[2em]">
-                <div className="lg:flex lg:flex-col hidden">
-                  <motion.div
-                    className="flex items-center  lg:gap-[1em] "
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
-                    variants={{
-                      hidden: { opacity: 0, y: 10 },
-                      visible: {
-                        opacity: 1,
-                        y: 0,
-                        transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
-                      },
-                    }}
-                  >
-                    <Link
-                      to={"/"}
-                      className="text-[#fff] font-openSans text-[0.9375rem] font-bold uppercase"
-                    >
-                      {" "}
-                      Forside
-                    </Link>
-
-                    <Link
-                      to={"/"}
-                      className="text-[#fff] font-openSans text-[0.9375rem] font-bold uppercase "
-                    >
-                      {""}
-                      Tjenester
-                    </Link>
-                    <Link
-                      to={"/"}
-                      className="text-[#fff] font-openSans text-[0.9375rem] font-bold uppercase "
-                    >
-                      {" "}
-                      Om oss
-                    </Link>
-                    <Link
-                      to={"/"}
-                      className="text-[#fff] font-openSans text-[0.9375rem] font-bold uppercase"
-                    >
-                      {" "}
-                      Kontakt
-                    </Link>
-                  </motion.div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="flex flex-col lg:hidden cursor-pointer  hover:opacity-100 transition-opacity duration-1000 ease-in-out active:scale-95 active:transition-transform active:duration-200 active:ease-out"
-              onClick={() => setSidebarOpen(!sidebarOpen)}
-            >
-              <motion.img
-                src={humberger}
-                alt=""
-                width={23}
-                height={0}
-                className="cursor-pointer"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.5 }}
-                variants={{
-                  hidden: { opacity: 0, y: 10 },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
-                  },
-                }}
-              />
-            </div>
-          </div>
+          {/* Mobile toggle */}
+          <button
+            className="md:hidden text-primary-foreground"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
-      </div>
 
-      {/* Overlay */}
-      {sidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black opacity-50 z-40"
-          onClick={() => setSidebarOpen(false)} // Close sidebar on overlay click
-        />
-      )}
-
-      {/* Sidebar */}
-      <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+        {/* Mobile menu */}
+        {open && (
+          <nav className="md:hidden bg-foreground border-t border-primary-foreground/10 pb-4">
+            {navLinks.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="block px-6 py-3 text-sm font-medium text-primary-foreground/80 hover:text-accent transition-colors"
+              >
+                {l.label}
+              </a>
+            ))}
+          </nav>
+        )}
+      </header>
     </>
   );
 }
