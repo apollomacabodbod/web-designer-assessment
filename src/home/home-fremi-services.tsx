@@ -21,7 +21,7 @@ const values = [
 
 const HomeFremiServices = () => (
   <section id="om-oss" className="bg-secondary mt-[4em] ">
-    <div className="container max-w-[1200px] lg:mx-auto  px-[1.25em]">
+    <div className="container max-w-[1200px] lg:mx-auto  px-[1.25em] py-[3em]">
       <motion.h2
         className="text-3xl md:text-4xl font-bold text-center mb-4"
         initial="hidden"
