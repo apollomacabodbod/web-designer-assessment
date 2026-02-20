@@ -2,7 +2,6 @@ import { useState, useEffect, useCallback } from "react";
 import { Phone } from "lucide-react";
 import heroImg1 from "src/assets/home/hero-construction.jpg";
 import heroImg2 from "src/assets/home/hero-construction-2.jpg";
-import HomeInfo from "./home-info";
 
 const slides = [
   {
