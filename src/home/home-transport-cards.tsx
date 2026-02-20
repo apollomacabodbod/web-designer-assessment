@@ -3,6 +3,8 @@ import dreneringImg from "src/assets/home-transport-cards/service-drenering.jpg"
 import tomteImg from "src/assets/home-transport-cards/service-tomteutgraving.jpg";
 import masseImg from "src/assets/home-transport-cards/service-massetransport.jpg";
 
+import { motion } from "framer-motion";
+
 const services = [
   {
     title: "Graving",
@@ -38,19 +40,60 @@ const HomeTransportCards = () => (
             key={s.title}
             className="group bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-border"
           >
-            <div className="aspect-[4/3] overflow-hidden">
+            <motion.div
+              className="aspect-[4/3] overflow-hidden"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+                },
+              }}
+            >
               <img
                 src={s.img}
                 alt={s.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 text-[#d48b0b]"
                 loading="lazy"
               />
-            </div>
+            </motion.div>
             <div className="p-6">
-              <h3 className="text-lg font-bold mb-2">{s.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <motion.h3
+                className="text-lg font-bold mb-2"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+                  },
+                }}
+              >
+                {s.title}
+              </motion.h3>
+              <motion.p
+                className="text-sm text-muted-foreground leading-relaxed"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+                  },
+                }}
+              >
                 {s.desc}
-              </p>
+              </motion.p>
             </div>
           </div>
         ))}

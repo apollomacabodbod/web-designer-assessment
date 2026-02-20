@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Phone } from "lucide-react";
 import heroImg1 from "src/assets/home/hero-construction.jpg";
 import heroImg2 from "src/assets/home/hero-construction-2.jpg";
+import { motion } from "framer-motion";
 
 const slides = [
   {
@@ -53,23 +54,58 @@ const HomeHeroSection = () => {
       {/* Content */}
       <div className="relative container flex flex-col items-start text-left gap-5 z-10 max-w-[1200px] lg:mx-auto  px-[1.25em]">
         {slides[current].subtitle && (
-          <p className="text-lg md:text-xl  font-semibold animate-fade-up text-[#d48b0b]">
+          <motion.p
+            className="text-lg md:text-xl  font-semibold animate-fade-up text-[#d48b0b]"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+              },
+            }}
+          >
             {slides[current].subtitle}
-          </p>
+          </motion.p>
         )}
-        <h1
+        <motion.h1
           key={current}
           className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary-foreground max-w-4xl text-balance uppercase animate-fade-up"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 10 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+            },
+          }}
         >
           {slides[current].heading}
-        </h1>
-        <a
+        </motion.h1>
+        <motion.a
           href="#kontakt"
-          className="inline-flex items-center gap-2   font-semibold px-7 py-3.5 rounded-lg hover:brightness-110 transition-all text-base mt-2 bg-[#d48b0b]"
+          className="inline-flex items-center gap-2   font-semibold px-7 py-3.5 rounded-lg hover:brightness-110  text-base mt-2 bg-[#d48b0b]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 10 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 1, ease: "easeInOut" }, // Smooth transition
+            },
+          }}
         >
           <Phone size={18} />
           Kontakt oss
-        </a>
+        </motion.a>
       </div>
 
       {/* Dots */}
@@ -87,16 +123,6 @@ const HomeHeroSection = () => {
           />
         ))}
       </div>
-
-      {/* Info bar */}
-      {/* <div className="absolute bottom-0 left-0 right-0 bg-primary/90 backdrop-blur-sm  ">
-        <div className="container flex flex-wrap justify-between items-center py-3 gap-3 text-sm text-primary-foreground max-w-[1200px] lg:mx-auto  px-[1.25em] ">
-          <span>✉ fro-fre@outlook.com</span>
-          <span>📞 926 04 072</span>
-          <span>📍 6260 Skodje</span>
-          <span>🏢 Orgnr 912 166 805</span>
-        </div>
-      </div> */}
     </section>
   );
 };
