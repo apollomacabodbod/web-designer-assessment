@@ -53,7 +53,7 @@ const HomeHeroSection = () => {
       {/* Content */}
       <div className="relative container flex flex-col items-start text-left gap-5 z-10 max-w-[1200px] lg:mx-auto  px-[1.25em]">
         {slides[current].subtitle && (
-          <p className="text-lg md:text-xl text-accent font-semibold animate-fade-up text-[#f1a522]">
+          <p className="text-lg md:text-xl  font-semibold animate-fade-up text-[#d48b0b]">
             {slides[current].subtitle}
           </p>
         )}
@@ -65,7 +65,7 @@ const HomeHeroSection = () => {
         </h1>
         <a
           href="#kontakt"
-          className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-semibold px-7 py-3.5 rounded-lg hover:brightness-110 transition-all text-base mt-2 bg-[#f1a522]"
+          className="inline-flex items-center gap-2   font-semibold px-7 py-3.5 rounded-lg hover:brightness-110 transition-all text-base mt-2 bg-[#d48b0b]"
         >
           <Phone size={18} />
           Kontakt oss
