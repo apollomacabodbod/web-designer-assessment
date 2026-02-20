@@ -100,7 +100,7 @@ const HomeFremiServices = () => (
                 },
               }}
             >
-              <v.icon className="text-primary text-[#d48b0b] " size={24} />
+              <v.icon className=" text-[#d48b0b] " size={24} />
             </motion.div>
             <motion.h3
               className="font-bold text-lg"
