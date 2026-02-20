@@ -39,7 +39,7 @@ const ContactSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           <motion.div
-            className="flex flex-col w-full h-[21.9375em] sm:h-full"
+            className="flex flex-col w-full h-[21.9375em] md:h-full"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
